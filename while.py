@@ -32,12 +32,20 @@ for i in age:
 print(total)
 i =+ 1
 """
-numbers = [1234, 1221, 987, 234, 12345, 5838, 5832, 153, 18, 112233, 122334, 4312]
+"""numbers = [1234, 1221, 987, 234, 12345, 5838, 5832, 153, 18, 112233, 122334, 4312]
 target = 5832  # The number we want to find
 
 for i in numbers:    
     print("Checking:", i)  
     if i == target:
         print("Target found:", i)
-        break
+        break"""
      
+import copy
+
+a = (1, 2, 3, 4, 5 )
+b = copy.deepcopy(a)
+                            # This is very important because it is aks commonly in interviews
+b[2].append(6)
+print(a)
+print(b)
