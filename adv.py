@@ -77,7 +77,7 @@ acc1.withdraw(200000)
 print( "after withdraw 200000" , acc1.get_balance())
 
 
-class payment:
+"""class payment:
     def __init__(self, amount, ):
         self.amount = amount   
 
@@ -96,9 +96,46 @@ class upipayment(payment):
 p1 = creditcardpayment(1000)
 p1.pay()
 p2 = upipayment(500)
-p2.pay()
+p2.pay()"""
 
-           
+
+class payment:
+    def __init__(self,balance,):
+        self.blance = balance
+
+
+    def pay(self):
+        print(f'Payment of {self.blance} has been made')
+
+    
+class casepayment(payment):
+    def pay(self):
+        result = self.blance * 1.05
+        print(f'payment of {result} has been made and 5 % aditional handling fee')
+         
+
+class creditcardpayment(payment):
+    def pay(self) :
+     result = self.blance * 1.05
+     print(f'payment of {result} has been made and 2 % aditional cut')
+
+class upipayment(payment):
+    def pay(self):
+        print(f'payment of {self.blance} has been made and got 10rs case back')
+    
+p1 = casepayment(10000)
+p1.pay()
+p2 = creditcardpayment(3000000)
+p2.pay()
+        
+ 
+
+
+
+    
+     
+     
+
    
     
 
